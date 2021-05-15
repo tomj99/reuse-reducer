@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { connect } from 'react-redux';
 const Counter = (props) => {  
     
@@ -6,12 +6,12 @@ const Counter = (props) => {
     const decrementString = 'DECREMENT_' + String(props.title)
     
     const increment = () => {
-        // console.log('inc: ', incrementString)
+        console.log('inc: ', incrementString)
         props.dispatch({ type: incrementString });
     }
     
     const decrement = () => {
-        // console.log('dec: ', decrementString)
+        console.log('dec: ', decrementString)
         props.dispatch({ type: decrementString});
     }
 
@@ -20,6 +20,7 @@ const Counter = (props) => {
         <h2>{props.title}</h2>
         <div>
           <button onClick={decrement}>-</button>
+          <span></span>
           <button onClick={increment}>+</button>
         </div>
       </div>
