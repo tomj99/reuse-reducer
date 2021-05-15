@@ -17,14 +17,12 @@ function createCounterWithNamedType(counterName = "") {
   return function counterReducer(state = initialState, action) {
     switch (action.type) {
       case `INCREMENT_${counterName}`:
-        console.log("increment: ", counterName);
-        console.log("count: ", state.count + 1);
+        // console.log("count: ", state.count + 1);
         return {
           count: state.count + 1,
         };
       case `DECREMENT_${counterName}`:
-        console.log("decrement: ", counterName);
-        console.log("count: ", state.count - 1);
+        // console.log("count: ", state.count - 1);
         return {
           count: state.count - 1,
         };
